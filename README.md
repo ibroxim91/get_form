@@ -40,6 +40,10 @@ cd get_form_django_drf
 
 docker-compose up --build
 
+# или 
+
+make project-up  # linux, macos
+
 # Для запуска FastAPI приложения: Перейдите в папку с проектом FastAPI:
 
 
@@ -48,6 +52,10 @@ cd get_form_fast_api
 
 
 docker-compose up --build
+
+# или
+
+make project-up  # linux, macos
 
 ```
 
@@ -90,7 +98,7 @@ run.bat
 
 ```
 
-Шаг 4: Тестирование API
+## Шаг 4: Тестирование API
 Скрипт script.py выполняет тестирование API для обоих приложений (Django и FastAPI). Для того чтобы протестировать, скрипт выполняет POST-запросы к эндпоинту /get_form. Убедитесь, что контейнеры Django и FastAPI работают, прежде чем запускать тесты.
 
 Пример тестирования:
@@ -99,6 +107,7 @@ run.bat
 python
 
 # Пример теста
+``` bash
 payload = {
     "name": "Contact Form",
     "lead_email": "email@mail.ru",
@@ -106,8 +115,13 @@ payload = {
     "submission_date": "15.10.2024"
 }
 
+```
+
 # Запуск теста
 test_get_form()
 Примечания:
 Скрипт автоматически проверяет статус ответа и выводит сообщение о прохождении теста.
 Убедитесь, что ваши контейнеры с Django и FastAPI работают на портах 8000 и 8001 соответственно.
+
+## Тестировать  с помощью Postman
+Также можно  тестировать  с помощью Postman. для этого импортируйте файл Get Form.postman_collection.json из репозитория в программу Postman

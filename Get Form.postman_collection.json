@@ -1,0 +1,122 @@
+{
+	"info": {
+		"_postman_id": "e9d9563a-a747-4868-83f1-f23afa00da45",
+		"name": "Get Form",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10923555"
+	},
+	"item": [
+		{
+			"name": "Fast Api Correct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \n    \"lead_email\": \"email@mail.ru\",\n    \"user_phone\": \"+78991234567\",\n    \"submission_date\": \"15.10.2024\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8001/get_form",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"get_form"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Django Api Correct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \n    \"lead_email\": \"email@mail.ru\",\n    \"user_phone\": \"+78991234567\",\n    \"submission_date\": \"15.10.2024\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/get_form",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"get_form"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fast Api Incorrect",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{      \n    \"client_name\":\"Ivan\",\n    \"client_email\": \"client@mail.ru\",\n    \"client_phone\": \"+78991234567\",\n    \"reg_date\": \"15.10.2024\"\n       \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8001/get_form",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8001",
+					"path": [
+						"get_form"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Django Api Incorrect",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{      \n    \"client_name\":\"Ivan\",\n    \"client_email\": \"client@mail.ru\",\n    \"client_phone\": \"+78991234567\",\n    \"reg_date\": \"15.10.2024\"\n       \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/get_form",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"get_form"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
