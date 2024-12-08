@@ -1,0 +1,41 @@
+version: '3.3'
+
+services:
+  django_app:
+    build:
+      context: ./get_form_django_drf
+    container_name: django_app
+    volumes:
+      - ./get_form_django_drf:/app
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./get_form_django_drf/.env
+    depends_on:
+      - mongo
+
+  fastapi_app:
+    build:
+      context: ./get_form_fast_api
+    container_name: fastapi_app
+    volumes:
+      - ./get_form_fast_api:/app
+    ports:
+      - "8001:8001"
+    env_file:
+      - ./get_form_fast_api/.env
+
+  mongo:
+    image: mongo:5.0
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+  
+  
+
+
+volumes:
+  mongo_data:
+    driver: local
