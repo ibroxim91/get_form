@@ -2,23 +2,9 @@
 # Описание проекта
 ## Этот проект включает в себя два приложения, Django и FastAPI, а также контейнер с MongoDB для хранения данных. Каждый проект имеет свой собственный docker-compose файл для запуска. Дополнительно предоставляется скрипт для тестирования API, который можно запустить  локально.
 
-Структура проекта
+## Структура проекта
 
-project/
-│
-├── get_form_djang-drf/           # Django проект
-│   ├── docker-compose.yml        # docker-compose для Django
-│   ├── Dockerfile                # Dockerfile для Django
-│   └── ...
-│
-├── get_form_fast_api/            # FastAPI проект
-│   ├── docker-compose.yml        # docker-compose для FastAPI
-│   ├── Dockerfile                # Dockerfile для FastAPI
-│   └── ...
-│
-├── run.sh                        # Скрипт для запуска в Linux/macOS
-├── run.bat                       # Скрипт для запуска в Windows
-└── script.py                     # Скрипт для тестирования API
+![Sxema](project_folders.png)
 
 ## Установка и запуск
 Шаг 1: Установка Docker и Docker Compose
